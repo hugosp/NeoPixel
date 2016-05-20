@@ -1,0 +1,49 @@
+<!doctype html5>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP is a NEO!</title>
+  <script src="script.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/jscolor.min.js" type="text/javascript" charset="utf-8"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <h1> NeoPixelFun!</h1>
+  <br>
+  <div class="container">
+  <form class="sliderholder">
+    <label for="r">R: </label>
+    <input id="r" name="r" type="range" min="0" max="255" step="1" value="0" oninput="sendRGB(value); r_value.value = r.value" />
+    <output for="r" id="r_value">0</output>
+  </form>
+
+  <form class="sliderholder">
+    <label for="g">G: </label>
+    <input id="g" type="range" min="0" max="255" step="1" value="0" oninput="sendRGB(value); g_value.value = g.value" />
+    <output for="g" id="g_value">0</output>
+  </form>
+
+
+  <form class="sliderholder">
+    <label for="b">B: </label>
+    <input id="b" type="range" min="0" max="255" step="1" value="0" oninput="sendRGB(value); b_value.value = b.value" />
+    <output for="b" id="b_value">0</output>
+  </form>
+
+  <form class="sliderholder">  
+    <label for="num">N: </label>
+    <input id="num" type="range" min="0" max="9" step="1" value="0" oninput="sendRGB(value); num_value.value = num.value" />
+    <output for="num" id="num_value">0</output>
+  </form>
+  
+  <form class="sliderholder">  
+    <label for="picker">Picker: </label>
+    <input id="picker" class="jscolor {width:400, height:200}" onChange="updatePicker(this.jscolor);" value="ababab">
+    <output for="picker" id="picker_value"></output>
+  </form>
+
+  </div>
+</body>
+</html>
